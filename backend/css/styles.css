@@ -1,173 +1,259 @@
-/* Global Styles */
 body {
     font-family: 'Segoe UI', Roboto, Arial, sans-serif;
-    background-color: #f5f7fa;
-    color: #2d3436;
+    background: url('money.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
+    line-height: 1.8;
+    animation: fadeIn 1.5s ease-in-out;
 }
 
-/* Container Styling */
 .container {
-    max-width: 450px;
-    margin: 60px auto;
-    background: #ffffff;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
-    transition: box-shadow 0.3s ease;
+    max-width: 500px;
+    margin: 80px auto;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    animation: slideUp 1s ease-in-out;
 }
 
 .container:hover {
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
-/* Headings */
 h1, h3 {
-    color: #2c3e50;
+    color: #1a202c;
     text-align: center;
     margin-bottom: 24px;
     font-weight: 700;
+    animation: fadeIn 1.2s ease-in-out;
 }
 
 h1 {
-    font-size: 28px;
+    font-size: 36px;
+    letter-spacing: 1.5px;
+    color: #3182ce;
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(90deg, #3182ce, #38a169);
+    background-clip: text;
+    -moz-background-clip: text;
+    color: transparent;
+    animation: bounceIn 1.5s ease-in-out;
 }
 
 h3 {
-    font-size: 20px;
-    color: #636e72;
+    font-size: 22px;
+    color: #718096;
 }
 
-/* Money Display */
 .money {
-    font-size: 26px;
+    font-size: 28px;
     font-weight: 700;
-    margin: 10px 0;
+    margin: 12px 0;
+    animation: pulse 2s infinite;
 }
 
 .money.plus {
-    color: #27ae60;
+    color: #38a169;
 }
 
 .money.minus {
-    color: #e74c3c;
+    color: #e53e3e;
 }
 
-/* Button Styling */
 .btn {
-    background-color: #0984e3;
+    background-color: #3182ce;
     color: #ffffff;
     border: none;
-    padding: 14px;
+    padding: 16px;
     cursor: pointer;
     width: 100%;
-    margin-top: 20px;
-    border-radius: 8px;
+    margin-top: 24px;
+    border-radius: 10px;
     font-size: 16px;
     font-weight: 600;
     text-transform: uppercase;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    animation: scaleUp 1s ease-in-out;
 }
 
 .btn:hover {
-    background-color: #74b9ff;
+    background-color: #63b3ed;
+    transform: scale(1.02);
 }
 
-/* List Styling */
 #list {
     list-style: none;
     padding: 0;
-    margin-top: 30px;
+    margin-top: 32px;
+    animation: fadeIn 1.5s ease-in-out;
 }
 
 #list li {
-    background-color: #f0f2f5;
-    padding: 16px;
-    border-left: 5px solid;
-    margin-bottom: 12px;
-    border-radius: 6px;
+    background-color: #f7fafc;
+    padding: 18px;
+    border-left: 6px solid;
+    margin-bottom: 14px;
+    border-radius: 8px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, box-shadow 0.2s ease;
+    animation: slideUp 0.8s ease-in-out;
 }
 
 #list li.plus {
-    border-color: #27ae60;
+    border-color: #38a169;
 }
 
 #list li.minus {
-    border-color: #e74c3c;
+    border-color: #e53e3e;
 }
 
 #list li:hover {
-    background-color: #dfe6e9;
+    background-color: #edf2f7;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
 }
 
-/* Delete Button Styling */
 .delete-btn {
     background-color: transparent;
     border: none;
-    color: #e74c3c;
+    color: #e53e3e;
     font-size: 20px;
     cursor: pointer;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, transform 0.2s ease;
+    animation: rotateIn 1.2s ease-in-out;
 }
 
 .delete-btn:hover {
-    color: #c0392b;
+    color: #c53030;
+    transform: scale(1.1);
 }
 
-/* Input Fields */
 input[type="text"],
 input[type="number"] {
-    width: calc(100% - 24px);
-    padding: 14px;
-    margin-bottom: 18px;
-    border: 1px solid #dfe6e9;
-    border-radius: 8px;
+    width: calc(100% - 20px);
+    padding: 16px;
+    margin-bottom: 20px;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
     font-size: 16px;
-    transition: border-color 0.3s ease;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeIn 1.5s ease-in-out;
 }
 
 input[type="text"]:focus,
 input[type="number"]:focus {
-    border-color: #0984e3;
+    border-color: #3182ce;
     outline: none;
+    box-shadow: 0 0 5px rgba(49, 130, 206, 0.3);
 }
 
-/* Income and Expense Overview */
 #income-expense {
     display: flex;
     justify-content: space-between;
-    margin: 30px 0;
+    margin: 40px 0;
+    gap: 2%;
+    animation: fadeIn 1s ease-in-out;
 }
 
 #income-expense div {
-    background-color: #ecf0f1;
-    padding: 20px;
-    border-radius: 8px;
+    background-color: #f7fafc;
+    padding: 24px;
+    border-radius: 12px;
     width: 48%;
     text-align: center;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, box-shadow 0.2s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
+    animation: slideUp 0.8s ease-in-out;
 }
 
 #income-expense div:hover {
-    background-color: #dfe6e9;
+    background-color: #edf2f7;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
 }
 
 #income-expense h3 {
-    margin: 0 0 12px;
-    font-size: 18px;
-    color: #7f8c8d;
+    margin: 0 0 14px;
+    font-size: 20px;
+    color: #4a5568;
     font-weight: 600;
 }
 
 #income-expense p {
     margin: 0;
-    font-size: 22px;
+    font-size: 24px;
     font-weight: 700;
-    color: #2d3436;
+    color: #2d3748;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes bounceIn {
+    from, 20%, 40%, 60%, 80%, to {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes scaleUp {
+    from {
+        transform: scale(0.9);
+        opacity: 0.5;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes rotateIn {
+    from {
+        transform: rotate(-90deg);
+        opacity: 0;
+    }
+    to {
+        transform: rotate(0deg);
+        opacity: 1;
+    }
 }
